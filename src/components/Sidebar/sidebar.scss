@@ -18,6 +18,7 @@
 }
 
 .sidebar__item {
+	position: relative;
 	padding: 13px 24px 11px 12px;
 
 	& + & {
@@ -26,17 +27,6 @@
 
 	&:nth-child(1) {
 		padding: 0 12px 0 12px;
-	}
-
-	&:nth-child(1):hover {
-		background-color: #1f1d2b;
-		border-radius: 0;
-		box-shadow: none;
-
-		.sidebar__link {
-			background-color: transparent;
-			box-shadow: none;
-		}
 	}
 
 	&:nth-child(2) {
@@ -54,6 +44,17 @@
 
 		.icon {
 			color: #fff;
+		}
+	}
+
+	&:nth-child(1):hover {
+		background-color: #1f1d2b;
+		border-radius: 0;
+		box-shadow: none;
+
+		.sidebar__link {
+			background-color: transparent;
+			box-shadow: none;
 		}
 	}
 }
