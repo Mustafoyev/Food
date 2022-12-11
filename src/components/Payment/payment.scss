@@ -1,0 +1,246 @@
+.overlay {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.payment-modal {
+	position: fixed;
+	right: 0;
+	width: 100%;
+	max-width: 409px;
+	height: 100vh;
+	padding: 24px;
+	background-color: #1f1d2b;
+	border-radius: 8px 0px 0px 8px;
+}
+
+.payment-modal__header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #393c49;
+}
+
+.payment-modal__header-title {
+	margin: 0;
+	margin-bottom: 8px;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 140%;
+	color: #ffffff;
+}
+
+.payment-modal__header-text {
+	margin: 0;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #abbbc2;
+}
+
+.payment-modal__body {
+	padding-top: 16px;
+}
+
+.payment-modal__body-title {
+	margin: 0;
+	margin-bottom: 16px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 140%;
+	color: #ffffff;
+}
+
+.payment-modal__body-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.payment-modal__body-item {
+	position: relative;
+	width: 100%;
+	max-width: 101px;
+	padding: 12px 12px 10px;
+	background-color: #252836;
+	border: 1px solid #abbbc2;
+	border-radius: 8px;
+
+	& + & {
+		margin-left: 8px;
+	}
+
+	&:nth-child(1):after {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		width: 16px;
+		height: 16px;
+		background-image: url('../../assets/images/checkmark-circle.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		content: '';
+	}
+}
+
+.payment-modal__body-itemimg {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 7px;
+}
+
+.payment-modal__body-itemtitle {
+	margin: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	color: #ffffff;
+	text-align: center;
+}
+
+.payment-modal__body-form {
+	padding-top: 12px;
+}
+
+.inp-top-wrapper {
+	margin-bottom: 12px;
+}
+
+.inp-top-title,
+.inp-center-title {
+	margin: 0;
+	margin-bottom: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	color: #ffffff;
+}
+
+.inp-top,
+.inp-center {
+	width: 100%;
+	max-width: 357px;
+	padding: 14px;
+	background-color: #2d303e;
+	border: 1px solid #393c49;
+	border-radius: 8px;
+	color: #fff;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: #e0e6e9;
+	}
+}
+
+.inp-center-wrapper {
+	margin-bottom: 24px;
+}
+
+.inp-bottom-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #393c49;
+}
+
+.inp-bottom-title {
+	margin: 0;
+	margin-bottom: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	color: #ffffff;
+}
+
+.inp-bottom {
+	width: 100%;
+	max-width: 172px;
+	padding: 14px;
+	background-color: #2d303e;
+	border: 1px solid #393c49;
+	border-radius: 8px;
+	color: #fff;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: #e0e6e9;
+	}
+}
+
+.inp-footer-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 14px;
+}
+
+.inp-footer-title {
+	margin: 0;
+	margin-bottom: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	color: #ffffff;
+}
+
+.sel-warpper {
+	width: 172px;
+}
+
+.inp-footer {
+	width: 100%;
+	max-width: 172px;
+	padding: 14px;
+	background-color: #2d303e;
+	border: 1px solid #393c49;
+	border-radius: 8px;
+	color: #fff;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: #e0e6e9;
+	}
+}
+
+.payment-modal__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 28px;
+}
+
+.payment-modal__footer-btn {
+	width: 100%;
+	max-width: 175px;
+	display: block;
+	padding: 14px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	color: #ea7c69;
+	background-color: #1f1d2b;
+	border: 1px solid #ea7c69;
+	border-radius: 8px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #ea7c69;
+		box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+		color: #fff;
+	}
+}

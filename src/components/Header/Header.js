@@ -1,3 +1,4 @@
+import { Input } from '../Input/Input';
 import './header.scss';
 
 export const Header = () => {
@@ -8,7 +9,7 @@ export const Header = () => {
 				<p className='site-header__time'>Tuesday, 2 Feb 2021</p>
 			</div>
 			<label className='site-header__label'>
-				<input
+				<Input
 					className='site-header__search'
 					type='search'
 					placeholder='Search for food, coffe, etc..'

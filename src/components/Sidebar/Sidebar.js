@@ -8,7 +8,7 @@ export const Sidebar = () => {
 			path: '/',
 			img: (
 				<svg
-					className='icon'
+					className='logo-icon'
 					width='56'
 					height='56'
 					viewBox='0 0 56 56'
@@ -161,9 +161,13 @@ export const Sidebar = () => {
 				<ul className='sidebar__list'>
 					{images.map((el) => (
 						<li className='sidebar__item'>
-							<Link className='sidebar__link' to={el.path}>
+							<NavLink
+								className={({ isActive }) =>
+									isActive ? 'sidebar__link--active' : 'sidebar__link'
+								}
+								to={el.path}>
 								{el.img}
-							</Link>
+							</NavLink>
 						</li>
 					))}
 				</ul>

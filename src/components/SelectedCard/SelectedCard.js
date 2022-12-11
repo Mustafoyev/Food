@@ -1,3 +1,4 @@
+import { Input } from '../Input/Input';
 import './selectedCard.scss';
 
 export const SelectedCard = () => {
@@ -180,7 +181,7 @@ export const SelectedCard = () => {
 								</span>
 							</div>
 							<div className='selected-card__bottom'>
-								<input
+								<Input
 									className='selected-card__bottom-inp'
 									type='text'
 									placeholder={el.order}

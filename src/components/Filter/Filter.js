@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Select } from '../Select/Select';
 import './filter.scss';
 
 export const Filter = () => {
@@ -39,9 +40,9 @@ export const Filter = () => {
 			<div className='filter__select-dishes'>
 				<h3 className='filter__select-title'>Choose Dishes</h3>
 				<div className='filter__select-wrapper'>
-					<select className='filter__select'>
+					<Select className='filter__select'>
 						<option value={'Dine In'}>Dine In</option>
-					</select>
+					</Select>
 				</div>
 			</div>
 		</div>

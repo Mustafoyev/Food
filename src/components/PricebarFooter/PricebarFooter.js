@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import './pricebarFooter.scss';
+import { ModalContext } from '../../context/ModalContext/ModalContext';
 
 export const PricebarFooter = () => {
+	const { setModal } = useContext(ModalContext);
 	return (
 		<div className='pricebar-footer'>
 			<div className='pricebar-footer__discount'>
@@ -11,7 +14,9 @@ export const PricebarFooter = () => {
 				<p className='pricebar-footer__subtotal-text'>Sub total</p>
 				<span className='pricebar-footer__subtotal-result'> $ 21,03</span>
 			</div>
-			<button className='pricebar-footer__btn'>Continue to Payment</button>
+			<button onClick={() => setModal(true)} className='pricebar-footer__btn'>
+				Continue to Payment
+			</button>
 		</div>
 	);
 };
