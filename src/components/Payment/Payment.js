@@ -7,11 +7,27 @@ import './payment.scss';
 export const Payment = () => {
 	const { setModal } = useContext(ModalContext);
 	const overlayRef = useRef();
+	const cardHolderRef = useRef();
+	const cardNumberRef = useRef();
+	const dataRef = useRef();
+	const cvvRef = useRef();
+	const selectRef = useRef();
+	const tableRef = useRef();
 
 	const handleCloseModal = (evt) => {
 		if (evt.target === overlayRef.current) {
 			setModal(false);
 		}
+	};
+
+	const handleFormSubmit = (evt) => {
+		evt.preventDefault();
+		console.log(cardHolderRef.current.value);
+		console.log(cardNumberRef.current.value);
+		console.log(dataRef.current.value);
+		console.log(cvvRef.current.value);
+		console.log(selectRef.current.value);
+		console.log(tableRef.current.value);
 	};
 
 	return (
@@ -77,10 +93,13 @@ export const Payment = () => {
 							<h4 className='payment-modal__body-itemtitle'>Cash</h4>
 						</li>
 					</ul>
-					<form className='payment-modal__body-form'>
+					<form
+						onSubmit={handleFormSubmit}
+						className='payment-modal__body-form'>
 						<div className='inp-top-wrapper'>
 							<h4 className='inp-top-title'>Cardholder Name</h4>
 							<Input
+								ref={cardHolderRef}
 								className='inp-top'
 								type='text'
 								placeholder='Levi Ackerman'
@@ -89,6 +108,7 @@ export const Payment = () => {
 						<div className='inp-center-wrapper'>
 							<h4 className='inp-center-title'>Card Number</h4>
 							<Input
+								ref={cardNumberRef}
 								className='inp-center'
 								type='number'
 								placeholder='2564 1421 0897 1244'
@@ -98,6 +118,7 @@ export const Payment = () => {
 							<div className='inp-bottom-wrap'>
 								<h4 className='inp-bottom-title'>Expiration Date</h4>
 								<Input
+									ref={dataRef}
 									className='inp-bottom'
 									type='text'
 									placeholder='02/2022'
@@ -105,7 +126,7 @@ export const Payment = () => {
 							</div>
 							<div className='inp-bottom-wrap'>
 								<h4 className='inp-bottom-title'>CVV</h4>
-								<Input className='inp-bottom' type='number' />
+								<Input ref={cvvRef} className='inp-bottom' type='number' />
 							</div>
 						</div>
 						<div className='inp-footer-wrapper'>
@@ -113,6 +134,7 @@ export const Payment = () => {
 								<h4 className='inp-footer-title'>Order Type</h4>
 								<div className='filter__select-wrapper sel-warpper'>
 									<Select
+										ref={selectRef}
 										className='select-footer filter__select'
 										type='text'
 										placeholder='02/2022'>
@@ -122,20 +144,25 @@ export const Payment = () => {
 							</div>
 							<div className='inp-footer-wrap'>
 								<h4 className='inp-footer-title'>Table no.</h4>
-								<Input className='inp-footer' type='number' placeholder='140' />
+								<Input
+									ref={tableRef}
+									className='inp-footer'
+									type='number'
+									placeholder='140'
+								/>
 							</div>
 						</div>
+						<div className='payment-modal__footer'>
+							<button
+								onClick={() => setModal(false)}
+								className='payment-modal__footer-btn'>
+								Cancel
+							</button>
+							<button className='payment-modal__footer-btn' type='submit'>
+								Confirm Payment
+							</button>
+						</div>
 					</form>
-				</div>
-				<div className='payment-modal__footer'>
-					<button
-						onClick={() => setModal(false)}
-						className='payment-modal__footer-btn'>
-						Cancel
-					</button>
-					<button className='payment-modal__footer-btn' type='submit'>
-						Confirm Payment
-					</button>
 				</div>
 			</div>
 		</div>
