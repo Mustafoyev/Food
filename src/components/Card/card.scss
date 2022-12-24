@@ -32,6 +32,10 @@
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-position: center;
+		animation-name: slidein;
+		animation-duration: 9000ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 		content: '';
 	}
 
@@ -77,6 +81,15 @@
 
 	&:nth-child(12):before {
 		background-image: url('../../assets/images/card6.png');
+	}
+}
+
+@keyframes slidein {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
 

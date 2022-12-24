@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import { ModalContext } from '../../context/ModalContext/ModalContext';
 import { Payment } from '../Payment/Payment';
 import { PricebarFooter } from '../PricebarFooter/PricebarFooter';
