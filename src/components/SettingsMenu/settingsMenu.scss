@@ -1,0 +1,85 @@
+.settings-menu {
+	width: 275px;
+	background-color: #1f1d2b;
+	border-radius: 8px;
+}
+
+.settings-menu__list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.settings-menu__item-link {
+	display: block;
+	padding: 24px 0;
+	text-decoration: none;
+
+	.setting-icon {
+		color: #abbbc2;
+	}
+
+	&:hover {
+		background-color: rgba(234, 124, 105, 0.26);
+
+		.settings-menu__item-content {
+			border-right: 4px solid #ea7c69;
+		}
+
+		.setting-icon {
+			color: #ea7c69;
+		}
+
+		.settings-menu__item-title {
+			color: #ea7c69;
+		}
+	}
+}
+
+.settings-menu__item-active {
+	display: block;
+	padding: 24px 0;
+	text-decoration: none;
+	background-color: rgba(234, 124, 105, 0.26);
+
+	.settings-menu__item-content {
+		border-right: 4px solid #ea7c69;
+	}
+
+	.setting-icon {
+		color: #ea7c69;
+	}
+
+	.settings-menu__item-title {
+		color: #ea7c69;
+	}
+}
+
+.settings-menu__item-content {
+	display: flex;
+	width: 100%;
+	padding: 0 24px;
+}
+
+.setting-icon {
+	display: block;
+	margin-right: 9px;
+	margin-top: 2px;
+}
+
+.settings-menu__item-title {
+	margin: 0;
+	margin-bottom: 4px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	color: #ffffff;
+}
+
+.settings-menu__item-text {
+	margin: 0;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 140%;
+	color: #abbbc2;
+}

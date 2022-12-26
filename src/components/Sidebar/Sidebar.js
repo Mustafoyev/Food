@@ -89,8 +89,8 @@ export const Sidebar = () => {
 			),
 		},
 		{
-			name: 'Setting',
-			path: '/setting',
+			name: 'Settings',
+			path: '/settings',
 			img: (
 				<svg
 					className='icon'
