@@ -37,9 +37,13 @@
 
 .selected-card__item-img {
 	display: block;
+	width: 40px;
+	height: 40px;
 	margin-right: 6px;
+	border-radius: 50%;
 	object-fit: cover;
 }
+
 .selected-card__top-wrapper {
 	position: relative;
 }
