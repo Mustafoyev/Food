@@ -1,82 +1,43 @@
+import { useContext } from 'react';
+import { DishesContext } from '../../context/DishesContext/DishesContext';
+import { Loader } from '../Loader/Loader';
 import './card.scss';
 
-export const Card = () => {
-	const dishes = [
-		{
-			name: 'Spicy seasoned seafood noodles',
-			price: '$ 2.29',
-			text: '20 Bowls available',
-		},
-		{
-			name: 'Salted Pasta with mushroom sauce',
-			price: '$ 2.69',
-			text: '11 Bowls available',
-		},
-		{
-			name: 'Beef dumpling in hot and sour soup',
-			price: '$ 2.99',
-			text: '16 Bowls available',
-		},
-		{
-			name: 'Healthy noodle with spinach leaf',
-			price: '$ 3.29',
-			text: '22 Bowls available',
-		},
-		{
-			name: 'Hot spicy fried rice with omelet',
-			price: '$ 3.49',
-			text: '13 Bowls available',
-		},
-		{
-			name: 'Spicy instant noodle with special omelette',
-			price: '$ 3.59',
-			text: '17 Bowls available',
-		},
-		{
-			name: 'Spicy seasoned seafood noodles',
-			price: '$ 2.29',
-			text: '20 Bowls available',
-		},
-		{
-			name: 'Salted Pasta with mushroom sauce',
-			price: '$ 2.69',
-			text: '11 Bowls available',
-		},
-		{
-			name: 'Beef dumpling in hot and sour soup',
-			price: '$ 2.99',
-			text: '16 Bowls available',
-		},
-		{
-			name: 'Healthy noodle with spinach leaf',
-			price: '$ 3.29',
-			text: '22 Bowls available',
-		},
-		{
-			name: 'Hot spicy fried rice with omelet',
-			price: '$ 3.49',
-			text: '13 Bowls available',
-		},
-		{
-			name: 'Spicy instant noodle with special omelette',
-			price: '$ 3.59',
-			text: '17 Bowls available',
-		},
-	];
+export const Card = ({ obj }) => {
+	const { dish, setDish } = useContext(DishesContext);
+
+	const handleAddDish = (id) => {
+		const newDish = obj.filter((el) => el.id === id);
+		const [newItem] = newDish;
+		setDish([...dish, newItem]);
+		console.log(dish);
+	};
+
 	return (
 		<div className='card'>
-			{dishes.length ? (
+			{obj.length ? (
 				<ul className='card__list'>
-					{dishes.map((el) => (
-						<li className='card__item'>
+					{obj.map((el) => (
+						<li
+							data-set-id={el.id}
+							className='card__item'
+							key={el.id}
+							onClick={() => handleAddDish(el.id)}>
+							<img
+								className='card__item-img'
+								src={`http://localhost:5000/${el.image}`}
+								alt={el.name}
+								width={132}
+								height={132}
+							/>
 							<h3 className='card__item-title'>{el.name}</h3>
-							<span className='card__item-price'>{el.price}</span>
-							<p className='card__item-text'>{el.text}</p>
+							<span className='card__item-price'>$ {el.price}</span>
+							<p className='card__item-text'>{el.bowls} Bowls available</p>
 						</li>
 					))}
 				</ul>
 			) : (
-				''
+				<Loader />
 			)}
 		</div>
 	);

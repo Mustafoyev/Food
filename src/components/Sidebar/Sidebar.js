@@ -156,7 +156,7 @@ export const Sidebar = () => {
 			{images.length ? (
 				<ul className='sidebar__list'>
 					{images.map((el) => (
-						<li className='sidebar__item'>
+						<li className='sidebar__item' key={el.name}>
 							<NavLink
 								className={({ isActive }) =>
 									isActive ? 'sidebar__link--active' : 'sidebar__link'

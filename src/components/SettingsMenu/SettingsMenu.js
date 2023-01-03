@@ -5,6 +5,7 @@ import './settingsMenu.scss';
 export const SettingsMenu = () => {
 	const menu = [
 		{
+			id: 1,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -23,6 +24,7 @@ export const SettingsMenu = () => {
 			path: 'appereance',
 		},
 		{
+			id: 2,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -41,6 +43,7 @@ export const SettingsMenu = () => {
 			path: 'your-restaurant',
 		},
 		{
+			id: 3,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -59,6 +62,7 @@ export const SettingsMenu = () => {
 			path: 'products-management',
 		},
 		{
+			id: 4,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -77,6 +81,7 @@ export const SettingsMenu = () => {
 			path: 'notifications',
 		},
 		{
+			id: 5,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -95,6 +100,7 @@ export const SettingsMenu = () => {
 			path: 'security',
 		},
 		{
+			id: 6,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -113,6 +119,7 @@ export const SettingsMenu = () => {
 			path: 'security',
 		},
 		{
+			id: 7,
 			icon: (
 				<svg
 					className='setting-icon'
@@ -137,7 +144,7 @@ export const SettingsMenu = () => {
 			{menu.length ? (
 				<ul className='settings-menu__list'>
 					{menu.map((el) => (
-						<li className='settings-menu__item'>
+						<li className='settings-menu__item' key={el.id}>
 							<NavLink
 								to={`${el.path}`}
 								className={({ isActive }) =>

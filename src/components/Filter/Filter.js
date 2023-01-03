@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Select } from '../Select/Select';
 import './filter.scss';
 
@@ -7,34 +7,58 @@ export const Filter = () => {
 		<div className='filter'>
 			<ul className='filter__list'>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'/'}>
 						Hot Dishes
-					</Link>
+					</NavLink>
 				</li>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'cool-dishes'}>
 						Cold Dishes
-					</Link>
+					</NavLink>
 				</li>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'soup'}>
 						Soup
-					</Link>
+					</NavLink>
 				</li>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'grill'}>
 						Grill
-					</Link>
+					</NavLink>
 				</li>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'appetizer'}>
 						Appetizer
-					</Link>
+					</NavLink>
 				</li>
 				<li className='filter__item'>
-					<Link className='filter__item-link' to={''}>
+					<NavLink
+						className={({ isActive }) =>
+							isActive ? 'filter__item-linkactive' : 'filter__item-link'
+						}
+						to={'dessert'}>
 						Dessert
-					</Link>
+					</NavLink>
 				</li>
 			</ul>
 			<div className='filter__select-dishes'>

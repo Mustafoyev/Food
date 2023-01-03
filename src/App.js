@@ -9,7 +9,7 @@ function App() {
 		<div className='App'>
 			<Sidebar />
 			<Routes>
-				<Route path='/' element={<Home />} />
+				<Route path='/*' element={<Home />} />
 				<Route path='/dashboard' element={<Dashboard />} />
 				<Route path='/settings/*' element={<Settings />} />
 			</Routes>

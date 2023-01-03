@@ -32,40 +32,30 @@
 .selected-card__top {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	margin-bottom: 15px;
 }
 
+.selected-card__item-img {
+	display: block;
+	margin-right: 6px;
+	object-fit: cover;
+}
 .selected-card__top-wrapper {
 	position: relative;
-	padding-left: 46px;
-
-	&::before {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 40px;
-		height: 40px;
-		background-image: url('../../assets/images/card1.png');
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center;
-		content: '';
-	}
-
-	&:nth-child(2)::before {
-		background-image: url('../../assets/images/card2.png');
-	}
 }
 
 .selected-card__title {
 	margin: 0;
 	margin-bottom: 4px;
+	margin-right: 60px;
+	width: 140px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 130%;
 	color: #ffffff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .selected-card__top-price {
@@ -79,6 +69,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: 20px;
 	width: 48px;
 	height: 48px;
 	font-weight: 500;

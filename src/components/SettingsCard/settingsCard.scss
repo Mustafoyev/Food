@@ -1,0 +1,86 @@
+.settings-card__item {
+	position: relative;
+	width: 221px;
+	height: 299px;
+	background-color: #1f1d2b;
+	border: 1px dashed #393c49;
+	border-radius: 8px;
+}
+
+.settings-card__item-img {
+	display: block;
+	width: 132px;
+	height: 132px;
+	margin: 0 auto;
+	margin-top: 22px;
+	border-radius: 50%;
+}
+
+.settings-card__item-title {
+	margin: 14px 0 8px 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 130%;
+	text-align: center;
+	color: #ffffff;
+}
+
+.settings-card__item-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 16px;
+}
+
+.settings-card__item-price {
+	display: block;
+	margin-right: 20px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: #abbbc2;
+}
+
+.settings-card__item-bowls {
+	display: block;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: #abbbc2;
+}
+
+.settings-card__item-btnwra {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 16px;
+	background-color: #50343a;
+	border-radius: 0px 0px 8px 8px;
+	cursor: pointer;
+}
+
+.settings-card__item-btn {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding-left: 28px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	color: #ea7c69;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		background-image: url('../../assets/images/pen.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		content: '';
+	}
+}

@@ -15,17 +15,8 @@
 }
 
 .filter__item {
-	border-bottom: 3px solid transparent;
 	& + & {
 		margin-left: 42px;
-	}
-
-	&:hover {
-		border-bottom: 3px solid #ea7c69;
-
-		.filter__item-link {
-			color: #ea7c69;
-		}
 	}
 }
 
@@ -36,6 +27,22 @@
 	line-height: 140%;
 	color: #ffffff;
 	text-decoration: none;
+	border-bottom: 3px solid transparent;
+
+	&:hover {
+		border-bottom: 3px solid #ea7c69;
+		color: #ea7c69;
+	}
+}
+
+.filter__item-linkactive {
+	display: block;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	text-decoration: none;
+	color: #ea7c69;
+	border-bottom: 3px solid #ea7c69;
 }
 
 .filter__select-dishes {

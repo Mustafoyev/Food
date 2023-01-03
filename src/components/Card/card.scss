@@ -19,69 +19,23 @@
 	padding: 114px 24px 24px 24px;
 	background-color: #1f1d2b;
 	border-radius: 16px;
+	cursor: pointer;
+}
 
-	&::before {
-		position: absolute;
-		top: -36px;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		width: 132px;
-		height: 132px;
-		background-image: url('../../assets/images/card1.png');
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center;
-		animation-name: slidein;
-		animation-duration: 9000ms;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		content: '';
-	}
-
-	&:nth-child(2):before {
-		background-image: url('../../assets/images/card2.png');
-	}
-
-	&:nth-child(3):before {
-		background-image: url('../../assets/images/card3.png');
-	}
-
-	&:nth-child(4):before {
-		background-image: url('../../assets/images/card4.png');
-	}
-
-	&:nth-child(5):before {
-		background-image: url('../../assets/images/card5.png');
-	}
-
-	&:nth-child(6):before {
-		background-image: url('../../assets/images/card6.png');
-	}
-
-	&:nth-child(7):before {
-		background-image: url('../../assets/images/card1.png');
-	}
-
-	&:nth-child(8):before {
-		background-image: url('../../assets/images/card2.png');
-	}
-
-	&:nth-child(9):before {
-		background-image: url('../../assets/images/card3.png');
-	}
-
-	&:nth-child(10):before {
-		background-image: url('../../assets/images/card4.png');
-	}
-
-	&:nth-child(11):before {
-		background-image: url('../../assets/images/card5.png');
-	}
-
-	&:nth-child(12):before {
-		background-image: url('../../assets/images/card6.png');
-	}
+.card__item-img {
+	position: absolute;
+	top: -36px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	display: block;
+	width: 132px;
+	height: 132px;
+	border-radius: 50%;
+	animation-name: slidein;
+	animation-duration: 9000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 
 @keyframes slidein {

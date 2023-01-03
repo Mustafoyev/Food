@@ -1,10 +1,8 @@
 .products-management {
-	position: fixed;
+	position: absolute;
 	top: 87px;
 	right: 24px;
 	left: 423px;
-	background-color: #1f1d2b;
-	border-radius: 8px;
 }
 
 .product__header-top {
@@ -71,33 +69,10 @@
 }
 
 .product__card {
-	height: 364px;
-	padding: 24px;
-	overflow-y: scroll;
-
-	&::-webkit-scrollbar {
-		width: 0;
-	}
-
-	&::-webkit-scrollbar-track {
-		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: darkgrey;
-		outline: 1px solid slategrey;
-	}
-}
-
-.product__card-list {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 	gap: 30px;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+	flex-wrap: wrap;
+	padding: 24px;
 }
 
 .product__card-item {
@@ -109,6 +84,7 @@
 	height: 299px;
 	border: 1px dashed #ea7c69;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 .product__card-item-btn {
