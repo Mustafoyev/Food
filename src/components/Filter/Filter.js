@@ -8,10 +8,11 @@ export const Filter = () => {
 			<ul className='filter__list'>
 				<li className='filter__item'>
 					<NavLink
+						end
 						className={({ isActive }) =>
 							isActive ? 'filter__item-linkactive' : 'filter__item-link'
 						}
-						to={'/'}>
+						to={'/home'}>
 						Hot Dishes
 					</NavLink>
 				</li>

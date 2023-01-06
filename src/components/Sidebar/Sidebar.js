@@ -5,7 +5,7 @@ export const Sidebar = () => {
 	const images = [
 		{
 			name: 'Home',
-			path: '/',
+			path: '/home',
 			img: (
 				<svg
 					className='icon'
@@ -162,6 +162,12 @@ export const Sidebar = () => {
 									isActive ? 'sidebar__link--active' : 'sidebar__link'
 								}
 								to={el.path}>
+								<div className='box-top'>
+									<b className='top'></b>
+								</div>
+								<div className='box-bottom'>
+									<b className='bottom'></b>
+								</div>
 								<span className='sidebar__item-wrapper'>{el.img}</span>
 							</NavLink>
 						</li>

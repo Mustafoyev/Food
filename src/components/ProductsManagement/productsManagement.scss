@@ -104,30 +104,3 @@
 	text-align: center;
 	color: #ea7c69;
 }
-
-.product__btns {
-	padding: 24px;
-}
-
-.product__btn {
-	width: 172px;
-	padding: 14px;
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 140%;
-	color: #ea7c69;
-	background-color: #1f1d2b;
-	border: 1px solid #ea7c69;
-	border-radius: 8px;
-	cursor: pointer;
-
-	& + & {
-		margin-left: 8px;
-	}
-
-	&:hover {
-		background-color: #ea7c69;
-		color: #fafafa;
-		box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
-	}
-}

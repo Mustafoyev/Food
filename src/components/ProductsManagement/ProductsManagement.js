@@ -31,7 +31,8 @@ export const ProductsManagement = () => {
 								className={({ isActive }) =>
 									isActive ? 'filter__item-linkactive' : 'filter__item-link'
 								}
-								to={'/settings/products-management/'}>
+								to={'/settings/products-management'}
+								end>
 								Hot Dishes
 							</NavLink>
 						</li>
@@ -96,10 +97,6 @@ export const ProductsManagement = () => {
 					<Route path='appetizer' element={<SettingsAppetizer />} />
 					<Route path='dessert' element={<SettingsDessert />} />
 				</Routes>
-			</div>
-			<div className='product__btns'>
-				<button className='product__btn'>Discard Changes</button>
-				<button className='product__btn'>Save Changes</button>
 			</div>
 			{addModal && <AddModal setAddModal={setAddModal} />}
 		</div>

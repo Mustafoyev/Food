@@ -10,7 +10,7 @@ export const Settings = () => {
 			<h2 className='settings__title'>Settings</h2>
 			<SettingsMenu />
 			<Routes>
-				<Route path='products-management/*' element={<ProductsManagement />} />
+				<Route path='/products-management/*' element={<ProductsManagement />} />
 			</Routes>
 		</div>
 	);
